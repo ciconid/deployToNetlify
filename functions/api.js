@@ -9,7 +9,9 @@ router.get('/', (req, res) => {
     res.json('Hello world! Goodbye world')
 })
 
-
+app.get('/.netlify/functions/', (req, res) => {
+    res.json('This is the .netlify/functions/ path')
+})
 
 
 const handler = ServerlessHttp(app);
@@ -17,4 +19,4 @@ module.exports.handler = handler;
 
 
 // Uncomment to test locally
-module.exports = router;
+//module.exports = router;
