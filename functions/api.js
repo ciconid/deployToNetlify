@@ -9,9 +9,9 @@ router.get('/', (req, res) => {
     res.json('Hello world! Goodbye world')
 })
 
-// app.get('/.netlify/functions/', (req, res) => {
-//     res.json('This is the .netlify/functions/ path')
-// })
+ app.get('/.netlify/functions/', (req, res) => {
+     res.json('This is the .netlify/functions/ path')
+ })
 
 
 app.use('/.netlify/functions/api', router);
