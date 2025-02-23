@@ -18,5 +18,14 @@ app.use('/.netlify/functions/api', router);
 
 module.exports.handler = serverless(app);
 
+// api.js
+exports.handler = async (event) => {
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ message: "Hello from Lambda!" }),
+    };
+};
+
+
 // Uncomment to test locally
 module.exports = router;
